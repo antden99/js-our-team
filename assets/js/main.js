@@ -49,3 +49,10 @@ const team = [
   const containerEl = document.querySelector(".container");
   //stampo in console per controllare di aver stampato bene
   console.log(containerEl);
+
+  //creo un ciclo for, così ad ogni iterazione vado a stamparmi un membro del team in DOM
+  for (let i = 0; i < team.length; i++) {
+    const memberTeam = team[i];
+        containerEl.innerHTML += `<p>membro ${i} : ${memberTeam.name}, ${memberTeam.role} , ${memberTeam.image}</p>`
+  }
+
