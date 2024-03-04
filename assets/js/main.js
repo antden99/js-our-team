@@ -49,13 +49,13 @@ for (let i = 0; i < team.length; i++) {
 const containerEl = document.querySelector(".container");
 //stampo in console per controllare di aver stampato bene
 console.log(containerEl);
-
+/*
 //creo un ciclo for, così ad ogni iterazione vado a stamparmi un membro del team in DOM
 for (let i = 0; i < team.length; i++) {
     const memberTeam = team[i];
     containerEl.innerHTML += `<p>membro ${i} : ${memberTeam.name}, ${memberTeam.role} , ${memberTeam.image}</p>`
 }
-/*
+
   //BONUS 1
 
   for (let i = 1; i <= team.length; i++) {
@@ -66,6 +66,11 @@ for (let i = 0; i < team.length; i++) {
 */
 //BONUS 2
 
+containerEl.innerHTML= `<h2 class="mt-5"> OUR TEAM</h2> <p>Ciao,in questa pagina ti mostriamo i componenti del nostro fantastico team di sviluppo! </p>`
+
+
+
+
 //mi creo un div con class="row" e lo appendo al mio container
 const divEl = document.createElement("div");
 divEl.classList.add("row"); //con class List accedo alle classi dell'elemento e con add aggiungo la classe all'elemento appena creato
@@ -75,10 +80,9 @@ containerEl.append(divEl);//appendo il div creato al container dell'html selezio
 for (let i = 0; i < team.length + 1; i++) {
     const member = team[i];
     console.log(member);
-    markup = `<div class="col"><div class="card mb-5"><img src="./assets/img/img/0${i + 1}.jpg" alt=""><div class="card-body">
+    const markup = `<div class="col"><div class="card mb-4"><img src="./assets/img/img/0${i + 1}.jpg" alt=""><div class="card-body">
         <h3 class="card-title">${member.name}</h3>
         <p>${member.role}</p>      
       </div></div></div>`
-
     divEl.innerHTML += `${markup}`
 }
