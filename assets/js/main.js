@@ -56,3 +56,11 @@ const team = [
         containerEl.innerHTML += `<p>membro ${i} : ${memberTeam.name}, ${memberTeam.role} , ${memberTeam.image}</p>`
   }
 
+  //BONUS 1
+
+  for (let i = 1; i <= team.length; i++) {
+        const markup = `<img src="./assets/img/img/0${i}.jpg" alt="">`  
+        console.log(markup);
+        containerEl.innerHTML += `${markup}`
+  }
+
